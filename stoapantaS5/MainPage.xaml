@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="stoapantaS5.MainPage">
+
+    <StackLayout>
+
+        <Label Text="CONSUMO DE SERVICIO WEB" HorizontalTextAlignment="Center" FontSize="24" TextColor="Blue"/>
+
+        <ListView x:Name="ListaEstudiantes">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblCodigo" Text="{Binding codigo}"/>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
+                            <Label x:Name="lblApellido" Text="{Binding apellido}"/>
+                            <Label x:Name="lblEdad" Text="{Binding edad}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>            
+        </ListView>
+
+        <Button x:Name="btnMostrar" Text="MOSTRAR" Clicked="btnMostrar_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
